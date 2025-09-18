@@ -2,6 +2,7 @@ name: CAP3764_PROJECT
 channels:
   - defaults
 dependencies:
+  - _py-xgboost-mutex=2.0=cpu_2
   - aom=3.6.0=h313beb8_0
   - appnope=0.1.4=py310hca03da5_0
   - asttokens=3.0.0=py310hca03da5_0
@@ -9,6 +10,7 @@ dependencies:
   - bottleneck=1.4.2=py310hbda83bc_0
   - brotli-python=1.0.9=py310h313beb8_9
   - bzip2=1.0.8=h80987f9_6
+  - c-ares=1.34.5=h2ca31fc_0
   - ca-certificates=2025.9.9=hca03da5_0
   - cairo=1.18.4=h191e429_0
   - comm=0.2.1=py310hca03da5_0
@@ -22,15 +24,27 @@ dependencies:
   - executing=2.2.1=py310hca03da5_0
   - expat=2.7.1=h313beb8_0
   - filelock=3.17.0=py310hca03da5_0
+  - font-ttf-dejavu-sans-mono=2.37=hd3eb1b0_0
+  - font-ttf-inconsolata=2.001=hcb22688_0
+  - font-ttf-source-code-pro=2.030=hd3eb1b0_0
+  - font-ttf-ubuntu=0.83=h8b1ccd4_0
   - fontconfig=2.14.1=h6402c1e_3
+  - fonts-anaconda=1=h8fa9717_0
+  - fonts-conda-ecosystem=1=hd3eb1b0_0
   - fonttools=4.55.3=py310h80987f9_0
   - freetype=2.13.3=h47d26ad_0
   - fribidi=1.0.10=h1a28f6b_0
   - fsspec=2025.7.0=py310hd096484_0
+  - gdk-pixbuf=2.42.10=h969f7ef_2
   - gettext=0.21.0=hbdbcc25_2
+  - giflib=5.2.2=h80987f9_0
+  - glib=2.84.2=hc880cf1_0
+  - glib-tools=2.84.2=hc880cf1_0
   - gmp=6.3.0=h313beb8_0
   - gmpy2=2.2.1=py310h5c1b81f_0
   - graphite2=1.3.14=hc377ac9_1
+  - graphviz=12.2.1=hd400d58_2
+  - gts=0.7.6=hde733a8_3
   - harfbuzz=10.2.0=he637ebf_1
   - icu=73.1=h313beb8_0
   - importlib-metadata=8.5.0=py310hca03da5_0
@@ -47,21 +61,31 @@ dependencies:
   - lerc=4.0.0=h313beb8_0
   - libabseil=20250127.0=cxx17_h313beb8_0
   - libavif=1.1.1=h80987f9_0
+  - libboost=1.88.0=hb389264_0
+  - libcurl=8.15.0=hcdd2897_0
   - libcxx=20.1.8=h8869778_0
   - libdeflate=1.22=h80987f9_0
+  - libev=4.33=h1a28f6b_1
   - libffi=3.4.4=hca03da5_1
+  - libgd=2.3.3=hd3b0a14_4
   - libgfortran=5.0.0=11_3_0_hca03da5_28
   - libgfortran5=11.3.0=h009349e_28
   - libglib=2.84.2=hdc2269c_0
   - libiconv=1.16=h80987f9_3
+  - libnghttp2=1.57.0=h62f6fdd_0
   - libopenblas=0.3.29=hea593b9_0
   - libpng=1.6.39=h80987f9_0
   - libprotobuf=5.29.3=h14f15fd_1
+  - librsvg=2.56.3=h38920c8_2
   - libsodium=1.0.18=h1a28f6b_0
+  - libssh2=1.11.1=h3e2b118_0
   - libtiff=4.7.0=h91aec0a_0
+  - libtool=2.4.7=h313beb8_0
   - libtorch=2.6.0=cpu_openblas_h5ebe3f5_6
   - libuv=1.48.0=h80987f9_0
+  - libwebp=1.3.2=hf40cdb4_1
   - libwebp-base=1.3.2=h80987f9_1
+  - libxgboost=3.0.1=h313beb8_0
   - libxml2=2.13.8=h0b34f26_0
   - llvm-openmp=20.1.8=he822017_0
   - lz4-c=1.9.4=h313beb8_1
@@ -76,6 +100,8 @@ dependencies:
   - nest-asyncio=1.6.0=py310hca03da5_0
   - networkx=3.4.2=py310hca03da5_0
   - nomkl=3.0=0
+  - nspr=4.35=h313beb8_0
+  - nss=3.89.1=h313beb8_0
   - numexpr=2.11.0=py310h8c72970_1
   - numpy=2.0.1=py310h3b2db8e_1
   - numpy-base=2.0.1=py310ha9811e2_1
@@ -84,6 +110,7 @@ dependencies:
   - opentelemetry-api=1.30.0=py310hca03da5_0
   - packaging=25.0=py310hca03da5_0
   - pandas=2.3.2=py310h43d6402_0
+  - pango=1.50.7=hf2328af_2
   - parso=0.8.4=py310hca03da5_0
   - pcre2=10.42=hb066dcc_1
   - pexpect=4.9.0=py310hca03da5_0
@@ -91,15 +118,19 @@ dependencies:
   - pip=25.2=pyhc872135_0
   - pixman=0.46.4=h09dc60e_0
   - platformdirs=4.3.7=py310hca03da5_0
+  - poppler=24.09.0=h10a2f5c_4
+  - poppler-data=0.4.11=hca03da5_1
   - prompt-toolkit=3.0.43=py310hca03da5_0
   - prompt_toolkit=3.0.43=hd3eb1b0_0
   - psutil=7.0.0=py310h254cc4a_0
   - ptyprocess=0.7.0=pyhd3eb1b0_2
   - pure_eval=0.2.3=py310hca03da5_0
+  - py-xgboost=3.0.1=py310hca03da5_0
   - pygments=2.19.1=py310hca03da5_0
   - pyparsing=3.2.0=py310hca03da5_0
   - python=3.10.18=h19e8193_0
   - python-dateutil=2.9.0post0=py310hca03da5_2
+  - python-graphviz=0.16=pyhd3eb1b0_1
   - python-tzdata=2025.2=pyhd3eb1b0_0
   - pytorch=2.6.0=cpu_openblas_py310h9475015_6
   - pytz=2025.2=py310hca03da5_0
@@ -123,6 +154,7 @@ dependencies:
   - wcwidth=0.2.13=py310hca03da5_0
   - wheel=0.45.1=py310hca03da5_0
   - wrapt=1.17.0=py310h80987f9_0
+  - xgboost=3.0.1=py310hca03da5_0
   - xz=5.6.4=h80987f9_1
   - zeromq=4.3.5=h313beb8_0
   - zipp=3.21.0=py310hca03da5_0
