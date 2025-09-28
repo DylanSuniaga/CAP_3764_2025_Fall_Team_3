@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<number_inpatient &le; 0.5<br/>gini = 0.497<br/>samples = 100.0%<br/>value = [0.539, 0.461]<br/>class = 0>, fillcolor="#fbede2"] ;
+1 [label=<number_emergency &le; 0.5<br/>gini = 0.474<br/>samples = 66.5%<br/>value = [0.615, 0.385]<br/>class = 0>, fillcolor="#f5d0b5"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<weight &le; 0.5<br/>gini = 0.469<br/>samples = 62.1%<br/>value = [0.625, 0.375]<br/>class = 0>, fillcolor="#f5cdb0"] ;
+1 -> 2 ;
+3 [label=<gini = 0.466<br/>samples = 60.1%<br/>value = [0.63, 0.37]<br/>class = 0>, fillcolor="#f4cbad"] ;
+2 -> 3 ;
+4 [label=<gini = 0.499<br/>samples = 2.0%<br/>value = [0.484, 0.516]<br/>class = 1>, fillcolor="#f3f9fd"] ;
+2 -> 4 ;
+5 [label=<number_emergency &le; 1.5<br/>gini = 0.498<br/>samples = 4.5%<br/>value = [0.47, 0.53]<br/>class = 1>, fillcolor="#e8f4fc"] ;
+1 -> 5 ;
+6 [label=<gini = 0.5<br/>samples = 3.4%<br/>value = [0.489, 0.511]<br/>class = 1>, fillcolor="#f7fbfe"] ;
+5 -> 6 ;
+7 [label=<gini = 0.482<br/>samples = 1.0%<br/>value = [0.405, 0.595]<br/>class = 1>, fillcolor="#c0e0f7"] ;
+5 -> 7 ;
+8 [label=<number_inpatient &le; 1.5<br/>gini = 0.475<br/>samples = 33.5%<br/>value = [0.389, 0.611]<br/>class = 1>, fillcolor="#b7dbf6"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<number_emergency &le; 0.5<br/>gini = 0.495<br/>samples = 19.2%<br/>value = [0.452, 0.548]<br/>class = 1>, fillcolor="#dceefa"] ;
+8 -> 9 ;
+10 [label=<gini = 0.498<br/>samples = 16.3%<br/>value = [0.467, 0.533]<br/>class = 1>, fillcolor="#e6f3fc"] ;
+9 -> 10 ;
+11 [label=<gini = 0.466<br/>samples = 2.9%<br/>value = [0.37, 0.63]<br/>class = 1>, fillcolor="#add7f4"] ;
+9 -> 11 ;
+12 [label=<number_inpatient &le; 4.5<br/>gini = 0.424<br/>samples = 14.3%<br/>value = [0.305, 0.695]<br/>class = 1>, fillcolor="#90c8f0"] ;
+8 -> 12 ;
+13 [label=<gini = 0.44<br/>samples = 12.2%<br/>value = [0.327, 0.673]<br/>class = 1>, fillcolor="#99cdf2"] ;
+12 -> 13 ;
+14 [label=<gini = 0.289<br/>samples = 2.1%<br/>value = [0.176, 0.824]<br/>class = 1>, fillcolor="#63b2eb"] ;
+12 -> 14 ;
+}
