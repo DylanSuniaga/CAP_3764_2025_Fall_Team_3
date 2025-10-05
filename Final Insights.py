@@ -23,7 +23,7 @@ option = st.sidebar.radio(
     ["Overview & Key Stats", "Distributions & Insights", "Correlation Heatmap"]
 )
 
-# --- Section 1: Overview & Key Stats ---
+#Overview & Key Stats
 if option == "Overview & Key Stats":
     st.subheader("Dataset Overview")
     st.write("Rows:", df.shape[0], "| Columns:", df.shape[1])
@@ -45,7 +45,7 @@ if option == "Overview & Key Stats":
         st.write(f"**{col}**")
         st.write(df[col].value_counts().head(5))
 
-# --- Section 2: Distributions & Insights ---
+#Distributions & Insights
 elif option == "Distributions & Insights":
     st.subheader("Distributions of Selected Columns")
     col = st.selectbox("Select a column to visualize", df.columns)
@@ -69,7 +69,7 @@ elif option == "Distributions & Insights":
     - Visual patterns in numeric features may indicate trends for further analysis.
     """)
 
-# --- Section 3: Correlation Heatmap ---
+#Correlation Heatmap
 elif option == "Correlation Heatmap":
     st.subheader("Correlation Heatmap (Numeric Columns Only)")
     numeric_df = df.select_dtypes(include=["int64", "float64"])
