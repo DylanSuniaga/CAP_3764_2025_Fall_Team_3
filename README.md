@@ -71,9 +71,14 @@ class_project/
 │   ├── data_helper.py                   # Helper functions for loading & encoding data
 │   └── __pycache__/                     # Python bytecode cache
 │
-├── Final_Insights.py                    # Streamlit app for interactive findings
+├── api.py                               # FastAPI backend for model serving
+├── streamlit_app.py                     # Streamlit dashboard for predictions
+├── readmission_models.joblib            # Trained models (generated from main.ipynb)
+├── Final_Insights.py                    # Streamlit app for EDA findings
 ├── visualization_additions.ipynb        # Additional visualizations
 ├── environment.yml                      # Conda environment specification
+├── requirements_deployment.txt          # Deployment dependencies
+├── DEPLOYMENT.md                        # Detailed deployment guide
 └── README.md                            # Project documentation (this file)
 ```
 
@@ -341,6 +346,38 @@ streamlit run Final_Insights.py
 
 ---
 
+## Model Deployment
+
+The trained models have been deployed using **FastAPI** (backend) and **Streamlit** (frontend) for real-time predictions.
+
+### Features
+
+- **Single Patient Prediction**: Interactive form for individual risk assessment
+- **Batch Prediction**: Upload CSV files or JSON for multiple patients, or use pre-loaded test data
+- **REST API**: Well-documented endpoints for integration
+- **Interactive Dashboard**: Beautiful Streamlit interface with visualizations
+- **Risk Classification**: Automatic categorization (Low/Medium/High)
+- **Test Data Evaluation**: Pre-loaded test batch with true labels for model performance evaluation
+
+### Quick Start
+
+```bash
+# Terminal 1 - Start FastAPI backend
+python api.py
+
+# Terminal 2 - Start Streamlit dashboard
+streamlit run streamlit_app.py
+```
+
+**Access Points:**
+- **Dashboard**: http://localhost:8501
+- **API**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
+
+For detailed deployment instructions, see **[DEPLOYMENT.md](DEPLOYMENT.md)**
+
+---
+
 ## Future Work & Improvements
 
 1. **Feature Expansion:**
@@ -354,6 +391,11 @@ streamlit run Final_Insights.py
 3. **Class Imbalance Handling:**
    - Apply SMOTE (Synthetic Minority Over-sampling Technique)
    - Adjust decision thresholds for precision-recall trade-offs based on healthcare industry standards
+
+4. **Production Deployment:**
+   - Deploy API to cloud platforms (AWS, Azure, GCP)
+   - Implement authentication and rate limiting
+   - Add monitoring and logging infrastructure
 
 ---
 
